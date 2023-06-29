@@ -20,6 +20,17 @@ In my studies about zero:
 
 ## Structs
 
+## Functions
+
+- Sintax
+- Defer
+- Methods
+- Polimorfism and interfaces
+- Anonymous
+- Expressions
+- Callbacks
+- Closures
+- recursion
 
 ### Reference 
 [Golang programming](https://go.dev/ref/spec)
