@@ -31,4 +31,10 @@ func main (){
 	fmt.Println(person1)
 	fmt.Println(person2)
 	fmt.Println(person3)
+
+	//To display only one entry of a struct
+
+	fmt.Println(person1.age)
+	fmt.Println(person1.name)
+	fmt.Println("My name is ", person1.name,"and I have ", person1.name, "years old" )
 }
