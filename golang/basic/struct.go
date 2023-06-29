@@ -12,6 +12,7 @@ type studant struct {
 	people // embedding struct people in the studant
 	enrol int
 }
+
 func main (){
 	person1 := people {
 		name: "Person1",
@@ -37,4 +38,16 @@ func main (){
 	fmt.Println(person1.age)
 	fmt.Println(person1.name)
 	fmt.Println("My name is ", person1.name,"and I have ", person1.name, "years old" )
+	
+	//Struct anonymous
+	AnonymousStruct := struct {
+		car string
+		year int
+		colour string
+	}{
+		car: "gol",
+		year: 1992,
+		colour: "red",
+	}
+	fmt.Println(AnonymousStruct)
 }
