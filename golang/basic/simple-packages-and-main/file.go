@@ -1,3 +1,3 @@
 package main
 
-const a = "hello World"
+var a = "hello World"
