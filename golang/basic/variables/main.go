@@ -9,6 +9,10 @@ var b bool
 
 type TestingStruct struct {}
 
+var x int = 1
+var y int32 = 2
+var z int =  x + y
+
 //VAMOS TRABALHAR COM ZERO EM GOLANG
 func main(){
     fmt.Printf("%v %v %v %q\n", i, f, b, s) 
