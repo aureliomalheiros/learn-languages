@@ -111,7 +111,11 @@ package command-line-arguments is not a main package
 _This is good! It reduces clutter in the code_
 
 ## Value Zero
-`value-zero.go`
+
+> ![Note]Here use documentation about package **fmt**
+> [fmt package](https://pkg.go.dev/fmt)
+
+[Value Zero](variables/variable-zero.go)
 
 
 In my studies about zero:
