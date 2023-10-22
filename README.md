@@ -6,11 +6,11 @@ In this repository using for study languages, when separate into folders.
 ```
 |_learn-language
 |__golang
-|___README.MD
+|___README.md
 |___Folder1
 |___Folder2
 |__python
-|___README.MD
+|___README.md
 |___Folder1
 |___Folder2
 ```
