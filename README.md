@@ -4,15 +4,37 @@ In this repository using for study languages, when separate into folders.
 
 
 ```
-|_learn-language
-|__golang
-|___README.md
-|___Folder1
-|___Folder2
-|__python
-|___README.md
-|___Folder1
-|___Folder2
+learn-language
+├── .github
+│   ├── workflows
+|   |   ├──lint-markdown.yaml
+|   |   ├──lint-python.yaml
+│   ├── pull_request_template.md
+├── algorithms
+│   ├── file-1.py
+│   ├── file-2.py
+│   ├── README.MD
+|   ├── ...
+├── challenges
+│   ├── folder-1
+│   │   ├── file-1.py
+│   │   ├── file-2.py
+│   ├── folder-2
+|   |   ├── file-2.go
+|   |   ├── ...
+|   ├── README.MD
+├── languages
+│   ├── golang
+│   │   ├── folders
+│   │   ├── README.MD
+│   │   ├── ...
+│   ├── python
+│   │   ├── folders
+│   │   ├── README.MD
+│   │   ├── ...
+|   ├── README.MD
+├── README.MD
+
 ```
 
 Of the README.MD in the folder language is this necessary documentation my studies.
