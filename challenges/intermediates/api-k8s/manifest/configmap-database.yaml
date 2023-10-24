@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-k8s
+  namespace: dev
+data:
+  DATABASE_HOST: db.example.com
+  DATABASE_PORT: "5432"

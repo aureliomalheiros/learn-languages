@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: uri
+  namespace: dev
+data:
+  URI_CACHE: my.example.com
