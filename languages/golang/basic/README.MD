@@ -143,7 +143,7 @@ go run main.go
 ./main.go:9:9: x declared and not used
 ```
 
-> ![IMPORTANT] 
+> ![Important]
 > When use global variable
 > When declare global variabels (package level) the compiler is erro-free.
 
@@ -175,7 +175,7 @@ func main(){
 ```
 ## Value Zero
 
-> ![NOTE]
+> ![Note]
 > Here use documentation about package **fmt**
 > [fmt package](https://pkg.go.dev/fmt)
 
@@ -204,11 +204,10 @@ Donavan(2017). _The lifetime of a variable is the time interval during which it 
 
 ### Pointers
 
-> ![NOTE] 
-> 
+> ![Note] 
 > I create folder to files pointers, but this subject is within variables
 
-> ![IMPORTANT] 
+> ![Important]
 > Best articles about Pointers
 
 Using pointers in Go is useful when you need to make values mutable or when you want to pass large values to functions without copying them. In my code [pointer-function.go](basic/pointers/pointer-function.go) I'm not trying to say that the sums are incorrect; it's just a demonstration.
