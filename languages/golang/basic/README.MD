@@ -208,8 +208,7 @@ Donavan(2017). _The lifetime of a variable is the time interval during which it 
 > 
 > I create folder to files pointers, but this subject is within variables
 
-> ![IMPORTANT]
-> 
+> ![IMPORTANT] 
 > Best articles about Pointers
 
 Using pointers in Go is useful when you need to make values mutable or when you want to pass large values to functions without copying them. In my code [pointer-function.go](basic/pointers/pointer-function.go) I'm not trying to say that the sums are incorrect; it's just a demonstration.
