@@ -89,9 +89,7 @@ And finish, function of the package "fmt" and println phrase in the terminal.
 
 > [!Important]
 > When not declared package main in my folder root?
-> 
-
-_When not use function main in the file root_
+> _When not use function main in the file root_
 
 
 ```bash
@@ -145,7 +143,8 @@ go run main.go
 ./main.go:9:9: x declared and not used
 ```
 
-> ![Important] When use global variable
+> ![IMPORTANT] 
+> When use global variable
 > When declare global variabels (package level) the compiler is erro-free.
 
 #### Declaration flavors
@@ -176,7 +175,8 @@ func main(){
 ```
 ## Value Zero
 
-> ![Note]Here use documentation about package **fmt**
+> ![NOTE]
+> Here use documentation about package **fmt**
 > [fmt package](https://pkg.go.dev/fmt)
 
 [Value Zero](variables/variable-zero.go)
@@ -198,10 +198,18 @@ In Golang it's possible create a type, for example
 type name string
 ```
 
-
-
 ### Variable lifetime
 
 Donavan(2017). _The lifetime of a variable is the time interval during which it exists while the program runs._ (p. 73) The language programming Golang
 
+### Pointers
 
+> ![NOTE]
+> I create folder to files pointers, but this subject is within variables
+
+> ![IMPORTANT]
+> Best articles about Pointers
+
+Using pointers in Go is useful when you need to make values mutable or when you want to pass large values to functions without copying them. In my code ![pointer-function.go](basic/pointers/pointer-function.go) I'm not trying to say that the sums are incorrect; it's just a demonstration.
+
+[Go 101](https://go101.org/article/pointer.html)
