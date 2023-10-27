@@ -8,7 +8,7 @@
 
 Golang use Camel Case to style.
 
-> ![Important] 
+>![Important] 
 > Best Practices 
 > - QuoteRuneToASCII or parseRequestLine
 > Not recomend
