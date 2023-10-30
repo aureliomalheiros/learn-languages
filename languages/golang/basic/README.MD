@@ -41,8 +41,7 @@ bool byte rune string error
 &&
 ||
 ```
-
-> ![Important]
+> [!Important]
 > The operator % is applied only to integer numbers.
 
 ---
