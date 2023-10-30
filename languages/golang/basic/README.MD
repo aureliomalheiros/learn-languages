@@ -6,7 +6,7 @@
 
 [Golang](https://golang.org/) uses Camel Case for styling variable and function names.
 
-> ![Important]
+> [!Important]
 > **Best Practices:**
 > - `QuoteRuneToASCII` or `parseRequestLine`
 >
@@ -134,7 +134,7 @@ go run main.go
 ./main.go:9:9: x declared and not used
 ```
 
-> ![Important]
+> [!Important]
 > When to use global variables?
 > When declaring global variables (at the package level), the compiler won't produce errors.
 
@@ -164,7 +164,7 @@ func main(){
 
 ## Zero Value
 
-> ![Note]
+> [!Note]
 > You can find information about the `fmt` package in the [fmt package documentation](https://pkg.go.dev/fmt).
 
 [Zero Value](variables/variable-zero.go)
@@ -190,10 +190,10 @@ According to Donavan (2017), "the lifetime of a variable is the time interval du
 
 ### Pointers
 
-> ![Note] 
+> [!Note] 
 > I created a folder for pointer-related files, but this topic is within the variables section.
 
-> ![Important]
+> [!Important]
 > Best articles about Pointers
 
 Using pointers in Go is useful when you need to make values mutable or when you want to pass large values to functions without copying them. In my code [pointer-function.go](basic/pointers/pointer-function.go), I'm not trying to say that the sums are incorrect; it's just a demonstration.
