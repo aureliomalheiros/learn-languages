@@ -2,7 +2,9 @@
 
 ## Basic Concepts
 
-### Camel Case
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5sZXQ4bjhwcDBocnNrMHIwZ3p4djFnY20xNmE0bGF3eHh6NHlleiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13HgwGsXF0aiGY/giphy.gif)
+
+**Camel Case**
 
 [Golang](https://golang.org/) uses Camel Case for styling variable and function names.
 
@@ -13,7 +15,7 @@
 > **Not Recommended:**
 > - `quote_rune_to_ASCII` or `parse_request_line`
 
-### Reserved Words
+**Reserved Words**
 
 ```go
 break     default      func   interface   select
@@ -23,7 +25,7 @@ const     fallthrough  if     range       type
 continue  for          import return      var
 ```
 
-### Types
+**Types**
 
 ```go
 int int8 int16 int32 int64
@@ -32,7 +34,7 @@ float32 float64 complex128 complex64
 bool byte rune string error
 ```
 
-### Binary Operators
+**Binary Operators**
 
 ```go
 * / % << >>& &^
@@ -45,9 +47,14 @@ bool byte rune string error
 > The operator % is applied only to integer numbers.
 
 ---
-## Hello World
 
-### Simple Package and How to Use
+**Hello World :=**
+
+---
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRvbGpwMDRwMzh0YmR3emVzOHQ1MTA2cjdhYnZjcXY2c2t1bzc4YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPnAiaMCws8nOsE/giphy.gif)
+
+**Simple Package and How to Use**
 
 By default, every Golang project has a file named `main.go`, which serves as the entry point of the project.
 
@@ -61,7 +68,7 @@ func main(){
 }
 ```
 
-### Line by Line Explanation
+**Line by Line Explanation**
 
 ```package main```
 
@@ -100,9 +107,15 @@ package command-line-arguments is not a main package
 
 ---
 
-## Variables
+**Variables**
 
-### Starting with the Basics
+---
+> [!Note] 
+> **Variable Lifetime**
+> According to Donavan (2017), "the lifetime of a variable is the time interval during which it exists while the program runs" (p. 73).
+
+
+**Starting with the Basics**
 
 To define a variable in Go:
 
@@ -138,7 +151,8 @@ go run main.go
 > When to use global variables?
 > When declaring global variables (at the package level), the compiler won't produce errors.
 
-#### Declaration Variations
+**Declaration Variations**
+
 - Global Variables
 ```go
 var x int = 1 // assigns a value
@@ -162,7 +176,7 @@ func main(){
 }
 ```
 
-## Zero Value
+**Zero Value**
 
 > [!Note]
 > You can find information about the `fmt` package in the [fmt package documentation](https://pkg.go.dev/fmt).
@@ -176,7 +190,7 @@ In my studies about zero values:
 - In variables with no return, you need to use an underscore `_`.
 - An uninitialized string in Go comes with the value: "".
 
-## Named Types
+**Named Types**
 
 In Go, you can create named types. For example:
 
@@ -184,20 +198,60 @@ In Go, you can create named types. For example:
 type name string
 ```
 
-### Variable Lifetime
+---
 
-According to Donavan (2017), "the lifetime of a variable is the time interval during which it exists while the program runs" (p. 73).
+**Pointers**
 
-### Pointers
+---
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcml6bDZtYWt0bGN6cmZ0Nmszbjk0dG5hNHo0MHFlNjV6bmxqZXkweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wwg1suUiTbCY8H8vIA/giphy-downsized-large.gif)
 
 > [!Note] 
 > I created a folder for pointer-related files, but this topic is within the variables section.
 
-> [!Important]
-> Best articles about Pointers
-
 Using pointers in Go is useful when you need to make values mutable or when you want to pass large values to functions without copying them. In my code [pointer-function.go](basic/pointers/pointer-function.go), I'm not trying to say that the sums are incorrect; it's just a demonstration.
 
 [Go 101](https://go101.org/article/pointer.html)
+
+
+---
+
+**Array**
+
+---
+
+---
+
+**Slices**
+
+---
+
+---
+
+**maps**
+
+---
+
+---
+
+**Functions**
+
+---
+
+---
+
+**Structs**
+
+---
+
+---
+
+**Methods**
+
+---
+
+---
+
+**Interfaces**
 
 ---
