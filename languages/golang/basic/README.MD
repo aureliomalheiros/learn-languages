@@ -219,7 +219,71 @@ Using pointers in Go is useful when you need to make values mutable or when you 
 **Array**
 
 ---
+Array is a sequence of the values, where it may contain zero or many values.
 
+Declaration **array**: 
+
+> _Declaration with type, but without values_
+
+```go 
+var a[10] int
+```
+
+> _Declarations with type and inicialization values_
+
+```go
+var b [5]int = [5]int{1, 2, 3, 4, 5}
+```
+
+> _Declaration variable without type (Type Inference Declaration), but inilization values_
+
+```go
+c := [2]float32{1.1, 2.1}
+```
+
+When use `[...]` in the declaration array means defined size amount of statup.
+For example:
+
+[My example](arrays/compare.go)
+
+```go
+b := [...]int{1, 2}
+``````
+
+> [!Note]
+> In the example inicialization the values {1, 2} defined size of the array.
+
+**Commpare arrays**
+
+It is possible compare values between arrays, below I will demonstrate examples:
+
+_The comparison is done within the array and the values_
+
+```go
+package main
+
+import "fmt"
+
+func main(){
+	a := [2]int{1, 2}
+	b := [...]int{1, 2}
+	c := [2]int{2, 1}
+
+	fmt.Println(
+		a == b, 
+		a == c, 
+		b == c,
+	)
+
+}
+```
+
+> [!Important]
+> When compare arrays that has diferent types, for example
+> `d := [2]float32{2.1, 2.3}	 == c := [2]int{2, 1}`
+> How different types will present this error.
+> `./erros.go:15:8: invalid operation: c == d (mismatched types [2]int and [2]float32)`
+ 
 ---
 
 **Slices**
@@ -228,7 +292,7 @@ Using pointers in Go is useful when you need to make values mutable or when you 
 
 ---
 
-**maps**
+**Maps**
 
 ---
 
