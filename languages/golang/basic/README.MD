@@ -246,6 +246,9 @@ For example:
 
 [My example](arrays/compare.go)
 
+> [!Note]
+> In this example, compiler count the array elements.
+
 ```go
 b := [...]int{1, 2}
 ``````
@@ -289,6 +292,62 @@ func main(){
 **Slices**
 
 ---
+_So, for now my study about Slices_
+
+Slice is similar to an array, but has its variable size, below example of the declaration:
+
+```var months []T string```
+
+The notation **[]** is specific to slices. The slices has three components:
+- pointer ->  Point to the first element's availability.
+- lengh -> The lenght is the number elements of the slice. (_Lenght cannot exceded limit capacity_)
+- capacity -> The number of the elements between begnning of the slice and finaly of the array.
+
+
+> **Declaration slices**
+
+Literal Expression
+
+_Basic declaration of a slice_
+
+```go
+mySlice := []int{1, 2, 3}
+```
+
+Empty Slice
+
+_We can create empty slice and atributed elements using append._
+
+> [!Note] Verify example
+> [Example using append](slices/using-append.go)
+
+> [!Important]
+> Function append is very common in slices, but attencion when use because if you exceed capacity the next value is 2 x capacity.
+
+
+```go
+var mySlice []int
+```
+
+Slice from an array
+ 
+Its possible create slice from an array
+
+```go 
+myArray := [5]int{1, 2, 3, 4, 5}
+mySlice := myArray[1:4]
+```
+
+Using make
+
+_Use to create a slice with capacity and lenght_
+
+> [!Note]
+> In the example number 3 represent lenght and 6 capacity.
+
+```go
+mySlice := make([]int, 3, 6)
+```
 
 ---
 
