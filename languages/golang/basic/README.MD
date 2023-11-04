@@ -318,7 +318,8 @@ Empty Slice
 
 _We can create empty slice and atributed elements using append._
 
-> [!Note] Verify example
+> [!Note] 
+> Verify example
 > [Example using append](slices/using-append.go)
 
 > [!Important]
