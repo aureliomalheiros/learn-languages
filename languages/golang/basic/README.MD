@@ -356,6 +356,52 @@ mySlice := make([]int, 3, 6)
 
 ---
 
+Maps in golang is a collection of key and value, when the keys is unique and values can you modifie (for example, update).
+
+I describe maps, but demonstrate the map structure:
+
+Basic map:
+
+```map[key]value```
+
+
+> [!Important]
+> Maps is a reference [Hash Tables](https://en.wikipedia.org/wiki/Hash_table)
+
+
+> **Declaration maps**
+
+
+Using make
+
+In below example create map with types key and value
+
+_In this case create empty map_
+
+```go
+myDays := make(map[string]string)
+months := make(map[int]string)
+```
+
+Empty (Literal notation)
+
+```go
+myMap := map[string]int{}
+```
+
+Initial values
+
+```go
+score := map[string]int{
+    "user1": 100000,
+    "user2": 200000,
+}
+```
+
+Using function
+
+Its possible create maps using return of a function, verify the example: [maps](maps/function.go)
+
 ---
 
 **Functions**
