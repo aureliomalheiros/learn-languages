@@ -414,6 +414,46 @@ Its possible create maps using return of a function, verify the example: [maps](
 
 ---
 
+Now,talk about structs in golang
+
+The structure is type data agregation when value zero or many named values.
+Each value call field, for example:
+
+```go
+type Person struct{
+    filed1 string
+    field2 int
+    field3 bool
+    field4,field5 float32
+}
+```
+
+Its possible create instantiation variable using structure, see example:
+
+```go
+type Person struct{
+    Name string
+    Age int
+    Salary bool
+}
+
+var person Person
+
+```
+
+> [!Important]
+> If fields write with minuscule letters meas that its value only be accessed within the package,
+> but the opposite can be access externally
+
+**Anonymous**
+
+Anonymous struct is normal struct, but its not defined in code and without name, the declaration is very simple.
+
+[anonymous](basic/structs/anonymous.go)
+
+Is often use in case when not reuseble values the struct, for example, in HTTP handlers.
+
+
 ---
 
 **Methods**
