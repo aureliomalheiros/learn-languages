@@ -1,5 +1,19 @@
 # Study Notes on Golang
 
+- [Study Notes on Golang](#study-notes-on-golang)
+  - [Basic Concepts](#basic-concepts)
+  - [Hello World :=](#hello-world-)
+  - [Variables](#variables)
+  - [Pointers](#pointers)
+  - [Array](#array)
+  - [Slices](#slices)
+  - [Maps](#maps)
+  - [Functions](#functions)
+  - [Structs](#structs)
+  - [Methods](#methods)
+  - [Interfaces](#interfaces)
+  - [Reference](#reference)
+
 ## Basic Concepts
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5sZXQ4bjhwcDBocnNrMHIwZ3p4djFnY20xNmE0bGF3eHh6NHlleiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13HgwGsXF0aiGY/giphy.gif)
@@ -48,7 +62,7 @@ bool byte rune string error
 
 ---
 
-**Hello World :=**
+## Hello World :=
 
 ---
 
@@ -107,7 +121,7 @@ package command-line-arguments is not a main package
 
 ---
 
-**Variables**
+## Variables
 
 ---
 > [!Note] 
@@ -200,7 +214,7 @@ type name string
 
 ---
 
-**Pointers**
+## Pointers
 
 ---
 
@@ -216,7 +230,7 @@ Using pointers in Go is useful when you need to make values mutable or when you 
 
 ---
 
-**Array**
+## Array
 
 ---
 Array is a sequence of the values, where it may contain zero or many values.
@@ -289,7 +303,7 @@ func main(){
  
 ---
 
-**Slices**
+## Slices
 
 ---
 _So, for now my study about Slices_
@@ -352,7 +366,7 @@ mySlice := make([]int, 3, 6)
 
 ---
 
-**Maps**
+## Maps
 
 ---
 
@@ -404,13 +418,13 @@ Its possible create maps using return of a function, verify the example: [maps](
 
 ---
 
-**Functions**
+## Functions
 
 ---
 
 ---
 
-**Structs**
+## Structs
 
 ---
 
@@ -456,12 +470,25 @@ Is often use in case when not reuseble values the struct, for example, in HTTP h
 
 ---
 
-**Methods**
+## Methods
 
 ---
 
 ---
 
-**Interfaces**
+## Interfaces
 
 ---
+
+---
+
+## Reference
+
+| Title               | Link                                                                                             |
+|---------------------|--------------------------------------------------------------------------------------------------|
+| Golang documentation| [link](https://go.dev/ref/spec)                                                                  |
+| Layout              | [link](https://go.dev/doc/modules/layout)                                                        |
+| Ardan Labs          | [link](https://www.ardanlabs.com/blog/)                                                          |
+| Anonymous Structs   | [link](https://blog.boot.dev/golang/anonymous-structs-golang/#:~:text=An%20anonymous%20struct%20is%20just,manageable%20for%20us%20as%20programmers.) |
+|
+
