@@ -12,6 +12,8 @@
   - [Structs](#structs)
   - [Methods](#methods)
   - [Interfaces](#interfaces)
+  - [Generics](#generics)
+  - [Modules](#modules)
   - [Reference](#reference)
 
 ## Basic Concepts
@@ -482,6 +484,76 @@ Is often use in case when not reuseble values the struct, for example, in HTTP h
 
 ---
 
+## Generics
+
+---
+
+---
+
+## Modules
+
+---
+
+Use modules is very important to the code:
+
+- Reading
+- Reusable
+- Maintaining
+
+The golang use folder $GOPATH/src from manager all modules, but its possible create modules in root folder.
+
+Following comand use to initialize module
+
+```bash
+go mod init name_module
+```
+When add module in the folder its possible use modules in root and in the project. Execute this `go.mod` command a new file created in this file see modules and version of golang.
+
+```go
+module github.com/aureliomalheiros/learn-languages
+
+go 1.21.2
+```
+> [!Note]
+> You can adding `required` in file `go.mod`
+
+![Modules](../../../img/modules-golang.png)
+
+Verify the example in folder [Modules](modules).
+
+To update package use comand:
+```bash
+go get package
+```
+
+> [!Important] **Export packages**
+> The golang to use first letter of variables, methods, interfaces, structs, etc. To define if value is local or exported in project.
+> A simple example is create variable in package and testing prinf.
+> To use values in external packages define values in uppercase.
+
+```go
+package hello
+
+import "fmt"
+
+func helloModule(){
+    fmt.Println("Hello module")
+}
+```
+```go
+package main
+
+import "hello"
+
+func main(){
+    hello.helloModule()
+}
+```
+
+You see erro when execute file `main.go`.
+
+---
+
 ## Reference
 
 | Title               | Link                                                                                             |
@@ -490,5 +562,6 @@ Is often use in case when not reuseble values the struct, for example, in HTTP h
 | Layout              | [link](https://go.dev/doc/modules/layout)                                                        |
 | Ardan Labs          | [link](https://www.ardanlabs.com/blog/)                                                          |
 | Anonymous Structs   | [link](https://blog.boot.dev/golang/anonymous-structs-golang/#:~:text=An%20anonymous%20struct%20is%20just,manageable%20for%20us%20as%20programmers.) |
+|Introduced Generics |[link](https://go.dev/blog/intro-generics)
 |
-
+|Using modules | [link](https://go.dev/blog/using-go-modules)

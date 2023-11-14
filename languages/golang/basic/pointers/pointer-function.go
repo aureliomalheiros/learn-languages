@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-//I'm not trying to say that the sums are incorrect; it's just a demonstration.
+
 //When use pointers function
 //Following example
 
