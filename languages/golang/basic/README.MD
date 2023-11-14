@@ -564,4 +564,4 @@ You see erro when execute file `main.go`.
 | Anonymous Structs   | [link](https://blog.boot.dev/golang/anonymous-structs-golang/#:~:text=An%20anonymous%20struct%20is%20just,manageable%20for%20us%20as%20programmers.) |
 |Introduced Generics |[link](https://go.dev/blog/intro-generics)
 |
-|Using modules | [link](https://go.dev/blog/using-go-modules)
+|Using modules | [link](https://go.dev/blog/using-go-modules)|
