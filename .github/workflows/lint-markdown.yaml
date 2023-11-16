@@ -12,14 +12,14 @@ jobs:
   markdown-testing:
     runs-on: ubuntu-latest
   
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
-    - name: Configure Node Js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       
-    - name: Markdown Lint
-      run: markdownlint '**/*.md'
+      - name: Configure Node Js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+        
+      - name: Markdown Lint
+        run: markdownlint '**/*.md'
