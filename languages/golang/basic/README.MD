@@ -62,6 +62,77 @@ bool byte rune string error
 > [!Important]
 > The operator % is applied only to integer numbers.
 
+**Build process**
+
+In golang its possible define operation system and architecture when compile files `*.go`. To compile files use comand `go build file.go` or `go build` in root folder.
+
+> [!Important]
+> Exist town varibles in operation system GOARCH and GOOS
+> GOARCH is architecture
+> GOOS is operation system
+
+Print in variables:
+```bash
+$ go env GOOS GOARCH
+linux
+amd64
+```
+
+List all architecture and operation system:
+
+_I execute in my ubuntu_
+
+```bash
+go tool dist list
+aix/ppc64
+android/386
+android/amd64
+android/arm
+android/arm64
+darwin/amd64
+darwin/arm64
+dragonfly/amd64
+freebsd/386
+freebsd/amd64
+freebsd/arm
+freebsd/arm64
+freebsd/riscv64
+illumos/amd64
+ios/amd64
+ios/arm64
+js/wasm
+linux/386
+linux/amd64
+linux/arm
+linux/arm64
+linux/loong64
+linux/mips
+linux/mips64
+linux/mips64le
+linux/mipsle
+linux/ppc64
+linux/ppc64le
+linux/riscv64
+linux/s390x
+netbsd/386
+netbsd/amd64
+netbsd/arm
+netbsd/arm64
+openbsd/386
+openbsd/amd64
+openbsd/arm
+openbsd/arm64
+plan9/386
+plan9/amd64
+plan9/arm
+solaris/amd64
+wasip1/wasm
+windows/386
+windows/amd64
+windows/arm
+windows/arm64
+```
+
 ---
 
 ## Hello World :=
@@ -564,3 +635,4 @@ You see erro when execute file `main.go`.
 | Anonymous Structs   | [link](https://blog.boot.dev/golang/anonymous-structs-golang/#:~:text=An%20anonymous%20struct%20is%20just,manageable%20for%20us%20as%20programmers.) |
 |Introduced Generics |[link](https://go.dev/blog/intro-generics)
 |Using modules | [link](https://go.dev/blog/using-go-modules)|
+|Build files | [Link](https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures)
