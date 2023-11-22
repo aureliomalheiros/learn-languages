@@ -495,6 +495,118 @@ Its possible create maps using return of a function, verify the example: [maps](
 
 ---
 
+Functions are block code with propose execute same task in code.
+
+Basic function
+```go
+func _name_(list of parameters) (list of results){
+    Operation of function
+}
+```
+
+- List of parameters are local variabels using in function.
+- The values of the arguments are given in the function call.
+
+```go
+func exampla(Argument1 int, Argument2 float32)(int, float32)
+```
+**Line by line**
+
+`Argument1 int` and `Argument2 float32` 
+
+- The variables are local variables the function
+
+`(int, float32)`
+
+- Are return the function, so one **float32** and **int**
+
+> [!Note]
+> The variables initialize with value zero.
+
+
+In golang its possible many **returns**, so when necessary returns of type **string**, **int** or **float**, for example see in code [many return](functions/func-parametrs.go).
+
+> [!Important]
+> File *func-parametrs.go* have others example using return and parameters.
+
+
+**Work with errors**
+
+Erros are common problems of code:
+- Connection with DB
+- E/S
+- Copy files
+- Etc ...
+
+> [!Note]
+> The code failure can always happen
+
+|      Working                                          |
+|-------------------------------------------------------|
+|All code have problem or bugs                          |
+|When we have only one possible cause have boolean      |
+|The error can be nil (success) or not nil (failure)    | 
+|In golang don't have **try exception**                 |
+|Propagate the error of a subroutine to the main routine|
+|All messages have good description                     |
+|In some cases you can **retry**                        |
+
+**Values function**
+
+
+
+**How to declare function**
+
+Simple function
+
+```go
+func Sum(a, b int) int{
+    return a
+}
+```
+
+Anonymous
+_In the function not have name_
+
+```go
+func(){
+    fmt.Println("Anonymous function")
+}()
+```
+
+Higher-order
+
+_These are functions that either accept other functions as arguments or return functions._
+
+
+```go
+func apply(nums []int, f func(int) int) []int {
+    result := make([]int, len(nums))
+    for i, n := range nums {
+        result[i] = f(n)
+    }
+    return result
+}
+```
+
+Variadic functions
+
+*These are functions that can accept a variable number of arguments.*
+
+```go
+func sum(nums ...int) int {
+    sumValues := 0
+
+    for _, num := range nums {
+        sumValues += num
+    }
+    return sumValues
+}
+```
+
+> [!Important]
+> Garbare Collection
+> It is capable of recycling memory that is not being used, but is not able to release unused resources in the Operating System, so beware of open connections (databases, files and etc.).
 ---
 
 ## Structs
