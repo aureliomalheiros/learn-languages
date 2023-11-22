@@ -568,6 +568,9 @@ func Sum(a, b int) int{
 Anonymous
 _In the function not have name_
 
+- Discartable functions
+- Used in goroutines
+
 ```go
 func(){
     fmt.Println("Anonymous function")
