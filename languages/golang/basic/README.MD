@@ -666,14 +666,51 @@ Basically in golang methods are variables configured in methods.
 
 **Declaration**
 
+_Value receiver_
 
 ```go
-func (A age) Date(Y year) int {
-    //operation
+func (u User) Person() {
+    u.Active = true
 }
 ```
 
-The paramether A is a receiver of the methods.
+_Pointer receiver_
+
+- This type declaration use when modify value of receiver
+
+```go
+func (u *User) Person(){
+    u.Active = true
+}
+```
+
+> [!Note]
+> When use value or pointer receiver?
+
+Value Receiver:
+
+- Value Copy:
+    
+    When using a value receiver, the method receives a copy of the value. Changes inside the method do not affect the original value.
+
+- Efficiency:
+    
+    In general, using value types is more efficient in terms of memory allocation and performance, as it does not involve pointers and dereferencing.
+
+Pointer Receiver:
+
+- Reference to the Original Value:
+    
+    When using a pointer receiver, the method receives a reference to the original value. This means changes inside the method directly affect the original value.
+
+- Efficiency:
+    
+    Using pointer types may involve more memory allocations, but it allows direct modification of the original value.
+
+> [!Waning]
+>  Value receiver: Not necessary modify values, when you want work copys values and you want save on memory
+> Pointer: Modify value of objects in methods, flexibility, but many use memory
+
 
 > [!Important]
 > Not exist _this_ or _self_
