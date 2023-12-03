@@ -709,6 +709,7 @@ Pointer Receiver:
 
 > [!Warning]
 >  Value receiver: Not necessary modify values, when you want work copys values and you want save on memory
+> 
 > Pointer: Modify value of objects in methods, flexibility, but many use memory
 
 
