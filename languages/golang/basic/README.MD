@@ -662,6 +662,37 @@ Is often use in case when not reuseble values the struct, for example, in HTTP h
 
 ---
 
+Basically in golang methods are variables configured in methods.
+
+**Declaration**
+
+
+```go
+func (A age) Date(Y year) int {
+    //operation
+}
+```
+
+The paramether A is a receiver of the methods.
+
+> [!Important]
+> Not exist _this_ or _self_
+
+- When we call a method, the argument for the receiver comes before the method name
+- You can declare a methods in all type define
+- When use methods of a type must have unique names, but methods diferent types you can use the same name.
+- Without acess directly to the variables
+- Clients don't have possibility of the modify variables directly
+
+
+**Encapsulation**
+
+When create variable or methods inaccessible we talk about encapsulation.
+
+> [!Important]
+> [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
+
+
 ---
 
 ## Interfaces
