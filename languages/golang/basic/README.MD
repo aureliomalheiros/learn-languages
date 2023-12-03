@@ -707,7 +707,7 @@ Pointer Receiver:
     
     Using pointer types may involve more memory allocations, but it allows direct modification of the original value.
 
-> [!Waning]
+> [!Warning]
 >  Value receiver: Not necessary modify values, when you want work copys values and you want save on memory
 > Pointer: Modify value of objects in methods, flexibility, but many use memory
 
