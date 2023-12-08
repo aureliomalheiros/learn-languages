@@ -737,6 +737,28 @@ When create variable or methods inaccessible we talk about encapsulation.
 
 ---
 
+Interfaces are a type that defines set methods, in Golang intefaces not implament methods, this is usually done by structs.
+
+> [!Note]
+> We don't know type interfaces, but We can  know what she can do.
+
+> [!Important]
+> To satisfy an interface we must have all the methods required by it
+
+**Interfaces values**
+
+Initialized value...
+
+Type | nil
+-----|----
+Value| nil
+
+But, interfaces with pointers not value nil.
+
+```go
+
+```
+
 ---
 
 ## Generics
