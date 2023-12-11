@@ -662,11 +662,102 @@ Is often use in case when not reuseble values the struct, for example, in HTTP h
 
 ---
 
+Basically in golang methods are variables configured in methods.
+
+**Declaration**
+
+_Value receiver_
+
+```go
+func (u User) Person() {
+    u.Active = true
+}
+```
+
+_Pointer receiver_
+
+- This type declaration use when modify value of receiver
+
+```go
+func (u *User) Person(){
+    u.Active = true
+}
+```
+
+> [!Note]
+> When use value or pointer receiver?
+
+Value Receiver:
+
+- Value Copy:
+    
+    When using a value receiver, the method receives a copy of the value. Changes inside the method do not affect the original value.
+
+- Efficiency:
+    
+    In general, using value types is more efficient in terms of memory allocation and performance, as it does not involve pointers and dereferencing.
+
+Pointer Receiver:
+
+- Reference to the Original Value:
+    
+    When using a pointer receiver, the method receives a reference to the original value. This means changes inside the method directly affect the original value.
+
+- Efficiency:
+    
+    Using pointer types may involve more memory allocations, but it allows direct modification of the original value.
+
+> [!Warning]
+>  Value receiver: Not necessary modify values, when you want work copys values and you want save on memory
+> 
+> Pointer: Modify value of objects in methods, flexibility, but many use memory
+
+
+> [!Important]
+> Not exist _this_ or _self_
+
+- When we call a method, the argument for the receiver comes before the method name
+- You can declare a methods in all type define
+- When use methods of a type must have unique names, but methods diferent types you can use the same name.
+- Without acess directly to the variables
+- Clients don't have possibility of the modify variables directly
+
+
+**Encapsulation**
+
+When create variable or methods inaccessible we talk about encapsulation.
+
+> [!Important]
+> [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
+
+
 ---
 
 ## Interfaces
 
 ---
+
+Interfaces are a type that defines set methods, in Golang intefaces not implament methods, this is usually done by structs.
+
+> [!Note]
+> We don't know type interfaces, but We can  know what she can do.
+
+> [!Important]
+> To satisfy an interface we must have all the methods required by it
+
+**Interfaces values**
+
+Initialized value...
+
+Type | nil
+-----|----
+Value| nil
+
+But, interfaces with pointers not value nil.
+
+```go
+
+```
 
 ---
 
