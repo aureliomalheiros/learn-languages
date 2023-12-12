@@ -2,6 +2,10 @@
 
 In this repository, it is used for study languages, when separated into folders.
 
+[![Markdown lint](https://github.com/aureliomalheiros/learn-languages/actions/workflows/lint-markdown.yaml/badge.svg)](https://github.com/aureliomalheiros/learn-languages/actions/workflows/lint-markdown.yaml)
+
+[![Python lint](https://github.com/aureliomalheiros/learn-languages/actions/workflows/lint-python.yaml/badge.svg)](https://github.com/aureliomalheiros/learn-languages/actions/workflows/lint-python.yaml)
+
 ## Summary
 
 - [Languages](languages/golang/README.MD)
