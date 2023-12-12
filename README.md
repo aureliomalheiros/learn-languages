@@ -9,9 +9,9 @@ In this repository, it is used for study languages, when separated into folders.
   - [Intermediate](languages/golang/basic/README.MD)
 - [Challenges](challenges/README.md)
 
-### The structure 
+### The structure
 
-```
+```bash
 learn-language
 ├── .github
 │   ├── workflows
