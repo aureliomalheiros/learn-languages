@@ -1,0 +1,9 @@
+FROM mysql:5.7
+
+ENV MYSQL_ROOT_PASSWORD=root \
+    MYSQL_DATABASE=helloworld \
+    MYSQL_PASSWORD=root
+    
+RUN echo "CREATE TABLE products (ID VARCHAR(255), name VARCHAR(80), price decimal(10,2), primary key (id));" > /docker-entrypoint-initdb.d/init.sql
+
+EXPOSE 3306
