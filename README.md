@@ -11,7 +11,6 @@ In this repository, it is used for study languages, when separated into folders.
 - [Languages](languages/golang/README.MD)
   - [Basic](languages/golang/basic/README.MD)
   - [Intermediate](languages/golang/basic/README.MD)
-- [Challenges](challenges/README.md)
 
 ### The structure
 
