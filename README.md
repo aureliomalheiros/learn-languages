@@ -26,15 +26,6 @@ learn-language
 │   ├── file-1.py
 │   ├── file-2.py
 │   ├── README.MD
-|   ├── ...
-├── challenges
-│   ├── folder-1
-│   │   ├── file-1.py
-│   │   ├── file-2.py
-│   ├── folder-2
-|   |   ├── file-2.go
-|   |   ├── ...
-|   ├── README.MD
 ├── languages
 │   ├── golang
 │   │   ├── folders
