@@ -18,6 +18,13 @@ type AddressResult struct {
 	ResponseTime float64 `json:"response_time"`
 }
 
+type ViaCEPResult struct {
+	Logradouro string `json:"logradouro"`
+	Bairro     string `json:"bairro"`
+	Localidade string `json:"localidade"`
+	Uf         string `json:"uf"`
+}
+
 func requestAddressData(apiURL, cep string, resultChan chan<- AddressResult, wg *sync.WaitGroup) {
 	defer wg.Done()
 
@@ -27,7 +34,9 @@ func requestAddressData(apiURL, cep string, resultChan chan<- AddressResult, wg 
 		Timeout: 1 * time.Second,
 	}
 
-	resp, err := client.Get(fmt.Sprintf(apiURL, cep))
+	reqURL := fmt.Sprintf(apiURL, cep)
+
+	resp, err := client.Get(reqURL)
 	if err != nil {
 		fmt.Printf("Error making request to %s: %v\n", apiURL, err)
 		return
@@ -41,28 +50,42 @@ func requestAddressData(apiURL, cep string, resultChan chan<- AddressResult, wg 
 	}
 
 	var result AddressResult
-	err = json.Unmarshal(responseData, &result)
+	switch apiURL {
+	case "https://brasilapi.com.br/api/cep/v1/%s":
+		err = json.Unmarshal(responseData, &result)
+	case "http://viacep.com.br/ws/%s/json/":
+		var viaCEPResult ViaCEPResult
+		err = json.Unmarshal(responseData, &viaCEPResult)
+		result = AddressResult{
+			Address:      viaCEPResult.Logradouro,
+			Neighborhood: viaCEPResult.Bairro,
+			City:         viaCEPResult.Localidade,
+			State:        viaCEPResult.Uf,
+			API:          reqURL, // Define the API URL here
+			ResponseTime: time.Since(startTime).Seconds(),
+		}
+	}
+
 	if err != nil {
 		fmt.Printf("Error decoding JSON from %s: %v\n", apiURL, err)
 		return
 	}
 
-	result.API = apiURL
-	result.ResponseTime = time.Since(startTime).Seconds()
+	// Print response time for debugging
+	fmt.Printf("Response time for API %s: %f seconds\n", apiURL, time.Since(startTime).Seconds())
 
 	resultChan <- result
 }
 
 func main() {
-	var wg sync.WaitGroup
-	resultChan := make(chan AddressResult, 2)
-
 	cep := "01153000"
-
 	apiURLs := []string{
 		"https://brasilapi.com.br/api/cep/v1/%s",
 		"http://viacep.com.br/ws/%s/json/",
 	}
+
+	resultChan := make(chan AddressResult, len(apiURLs))
+	var wg sync.WaitGroup
 
 	for _, apiURL := range apiURLs {
 		wg.Add(1)
@@ -73,16 +96,17 @@ func main() {
 	close(resultChan)
 
 	var fastestResult AddressResult
-	fastestResult.ResponseTime = 1.0 // Max response time
+	fastestTime := 1.0
 
 	for result := range resultChan {
-		if result.ResponseTime < fastestResult.ResponseTime {
+		if result.ResponseTime < fastestTime {
 			fastestResult = result
+			fastestTime = result.ResponseTime
 		}
 	}
 
-	if fastestResult.ResponseTime == 1.0 {
-		fmt.Println("No response received within the timeout.")
+	if fastestTime == 1.0 {
+		fmt.Println("All requests timed out.")
 	} else {
 		fmt.Printf("Fastest result from API %s:\n", fastestResult.API)
 		fmt.Printf("Address Data: %+v\n", fastestResult)
