@@ -56,3 +56,6 @@ The bellow command exec the client and You will generate file `cotacao.txt`
 cd client
 go run client.go
 ```
+
+If you will want generate quote dollars in web client it's possible use URL: `http://localhost:8080/cotacao`
+
