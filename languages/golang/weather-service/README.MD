@@ -35,9 +35,8 @@ curl http://localhost:8080/weather/65055540
 
 Cloud Run:
 
-```bash
-https://weather-service-y4g7b3akmq-ue.a.run.app/weather/65055540
-```
+[Cloud Run](https://weather-service-y4g7b3akmq-ue.a.run.app/weather/65055540)
+
 
 ```json
 {"temp_C":28,"temp_F":82.4,"temp_K":301.15}
@@ -45,3 +44,9 @@ https://weather-service-y4g7b3akmq-ue.a.run.app/weather/65055540
 
 
 ### Tests
+
+You can running tests in GH Actions or in local machine.
+
+```bash
+go test -v 
+```
