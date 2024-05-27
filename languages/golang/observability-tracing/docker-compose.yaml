@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  service-a:
+    build:
+      context: ./service-a
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-b
+      - zipkin
+    environment:
+      - ZIPKIN_ADDRESS=http://zipkin:9411/api/v2/spans
+
+  service-b:
+    build:
+      context: ./service-b
+    ports:
+      - "8081:8081"
+    depends_on:
+      - zipkin
+    environment:
+      - ZIPKIN_ADDRESS=http://zipkin:9411/api/v2/spans
+
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+
