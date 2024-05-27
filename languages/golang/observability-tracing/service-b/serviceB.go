@@ -35,11 +35,11 @@ type WeatherAPIResponse struct {
     } `json:"current"`
 }
 
-const weatherAPIKey = "8665baf001c34b0c921185735242705" 
+const weatherAPIKey = "YOUR_WEATHER_API_KEY" 
 
 func main() {
     // Initialize Zipkin exporter
-    exporter, err := zipkin.New("http://localhost:9411/api/v2/spans")
+    exporter, err := zipkin.New("http://zipkin:9411/api/v2/spans")
     if err != nil {
         log.Fatalf("failed to initialize zipkin exporter %v", err)
     }

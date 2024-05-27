@@ -11,6 +11,8 @@ services:
       - zipkin
     environment:
       - ZIPKIN_ADDRESS=http://zipkin:9411/api/v2/spans
+    networks:
+      - observability-network
 
   service-b:
     build:
@@ -21,9 +23,16 @@ services:
       - zipkin
     environment:
       - ZIPKIN_ADDRESS=http://zipkin:9411/api/v2/spans
+    networks:
+      - observability-network
 
   zipkin:
     image: openzipkin/zipkin
     ports:
       - "9411:9411"
+    networks:
+      - observability-network
 
+networks:
+  observability-network:
+    driver: bridge
