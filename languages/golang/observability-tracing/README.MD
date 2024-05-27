@@ -1,7 +1,5 @@
 # Observability and trancing
 
-# Temperature by Zip Code Service
-
 This project consists of two services (Service A and Service B) that work together to receive a zip code, identify the corresponding city, and return the current temperature of that city in Celsius, Fahrenheit, and Kelvin. The system implements distributed tracing using OpenTelemetry (OTEL) and Zipkin to monitor and trace requests.
 
 ## Prerequisites
