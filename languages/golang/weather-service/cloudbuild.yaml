@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--build-arg', 'WEATHER_API_KEY=$_WEATHER_API_KEY', '-t', 'us-east1-docker.pkg.dev/terraform-iac-330504/golang/weather-service:v0.1', '.']
+images: ['us-east1-docker.pkg.dev/terraform-iac-330504/golang/weather-service:v0.1']
+substitutions:
+  _WEATHER_API_KEY: default_value
