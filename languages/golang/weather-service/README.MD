@@ -6,6 +6,8 @@ weather-service/
 ├── test/
 │   └── main_test.go
 ├── Dockerfile
+├── docker-comopose.yaml
+├── .env
 ├── go.mod
 ├── go.sum
 └── README.md
@@ -24,6 +26,14 @@ go run main.go
 curl http://localhost:8080/weather/YOUR_CEP
 ```
 
+Docker Compose:
+
+> [!Note]
+> It's necessary modify value in file `.env` with your token.
+
+```bash
+sudo docker-compose up --build
+```
 
 Example:
 
