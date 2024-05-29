@@ -16,7 +16,7 @@ const (
 	weatherAPIURL = "http://api.weatherapi.com/v1/current.json?key=%s&q=%s"
 )
 
-var weatherAPIKey = os.Getenv("WEATHER_API_KEY")
+var weatherAPIKey string
 
 type ViaCepResponse struct {
 	Cep         string `json:"cep"`
@@ -43,6 +43,11 @@ type WeatherResponse struct {
 }
 
 func main() {
+	weatherAPIKey = os.Getenv("WEATHER_API_KEY")
+	if weatherAPIKey == "" {
+		log.Fatal("WEATHER_API_KEY not set")
+	}
+
 	r := gin.Default()
 	r.GET("/weather/:cep", getWeather)
 	r.Run()
