@@ -14,6 +14,7 @@
   - [Interfaces](#interfaces)
   - [Generics](#generics)
   - [Modules](#modules)
+  - [Packages](#packages)
   - [Reference](#reference)
 
 ## Basic Concepts
@@ -830,6 +831,67 @@ func main(){
 You see erro when execute file `main.go`.
 
 ---
+
+## Packages
+
+---
+
+Go packages are a way of modularizing certain logic written in the language.
+Gains we may have when using packages:
+Modularization
+Encapsulation
+Restrict visibility variables
+Shared funcionalities
+
+It's necessary to declare the packages at the beginning of every file, for example:
+
+**Simple import**
+
+```go
+import "fmt"
+import "os"
+
+func main(){
+
+}
+```
+
+**Classic**
+
+```go
+import (
+    "fmt"
+    "html"
+    "os"
+    "log"
+)
+```
+
+**Renamed package**
+
+```go
+import (
+    mathrand "math/rand"
+    "crypto/rand"
+)
+```
+> [!Note]
+> In this case **renamed package** is important use renamed because in some cases is note possible use some case in file
+
+
+
+> [!Important]
+> Package used in the test:
+> Whenever you use packages to test your program, you need to create files _test.go and packages _test.
+> This suffix tells the computer that files are used in a test of the program.
+
+---
+
+
+**Name of the packages**
+
+The name must be clear and short, but it cannot be a riddle for you to understand, describe the functionality the package
+
 
 ## Reference
 
