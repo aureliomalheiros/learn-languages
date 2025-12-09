@@ -33,28 +33,23 @@ func main() {
     fmt.Printf("Número de goroutines: %d\n", runtime.NumGoroutine())
     fmt.Printf("Número de threads: %d\n", runtime.GOMAXPROCS(0))
 
-	//Analise memory
 	var memBefore runtime.MemStats
 	runtime.ReadMemStats(&memBefore)
 	fmt.Printf("Memory Alloc before: %d bytes\n", memBefore.Alloc)
 
-	//Create a goroutine
 	fmt.Println("Starting goroutine...")
 	go myFunction()
 
-	//Wait for goroutine to finish
 	time.Sleep(20 * time.Second)
 
 	fmt.Println("After goroutine execution:")
 	fmt.Printf("Number of goroutines: %d\n", runtime.NumGoroutine())
 
-	//Analyze memory after goroutine execution
 	var memAfter runtime.MemStats
 	runtime.ReadMemStats(&memAfter)
 	fmt.Printf("Memory Alloc after: %d bytes\n", memAfter.Alloc)
 	fmt.Printf("Memory Alloc difference: %d bytes\n", memAfter.Alloc - memBefore.Alloc)
 
-	//Wait before exiting
 	time.Sleep(5 * time.Second)
 	
 	fmt.Printf("Number of goroutines before exit: %d\n", runtime.NumGoroutine())
