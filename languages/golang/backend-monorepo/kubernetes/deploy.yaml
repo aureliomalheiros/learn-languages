@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: math-config
+data:
+  A: "10" 
+  B: "20"  
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: math-pod
+spec:
+  containers:
+    - name: math-container
+      image: ghcr.io/aureliomalheiros/math:0.1  
+      command: ["sleep", "3600"]
+      env:
+        - name: VARIABLE_A  
+          valueFrom:
+            configMapKeyRef:
+              name: math-config  
+              key: A          
+        - name: VARIABLE_B 
+          valueFrom:
+            configMapKeyRef:
+              name: math-config 
+              key: B             
