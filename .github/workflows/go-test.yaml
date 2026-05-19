@@ -1,0 +1,39 @@
+name: Go Tests
+
+on:
+  push:
+    paths:
+      - "**.go"
+      - "**/go.mod"
+      - ".github/workflows/go-test.yaml"
+  pull_request:
+    paths:
+      - "**.go"
+      - "**/go.mod"
+
+jobs:
+  test:
+    name: test (${{ matrix.module }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - module: languages/golang/backend-monorepo
+            go: "1.22"
+          - module: languages/golang/stress-test
+            go: "1.22"
+          - module: languages/golang/weather-service
+            go: "1.21"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go }}
+          cache-dependency-path: ${{ matrix.module }}/go.sum
+
+      - name: go test
+        working-directory: ${{ matrix.module }}
+        run: go test ./... -v -race -count=1
